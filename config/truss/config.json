@@ -1,0 +1,107 @@
+{
+  "rootPath": "~/.phaeton",
+  "label": "truss",
+  "version": "0.0.9",
+  "networkVersion": "2.0",
+  "rpc": {
+    "enable": false,
+    "mode": "ipc",
+    "port": 8080
+  },
+  "forging": {
+    "waitThreshold": 2,
+    "delegates": [],
+    "force": false
+  },
+  "network": {
+    "seedPeers": [
+			{
+				"ip": "core-seed1-truss.phaeton.io",
+				"port": 5000
+			},
+      {
+				"ip": "core-seed2-truss.phaeton.io",
+				"port": 5000
+			},
+      {
+				"ip": "core-seed3-truss.phaeton.io",
+				"port": 5000
+			},
+      {
+				"ip": "core-seed4-truss.phaeton.io",
+				"port": 5000
+			},
+      {
+				"ip": "core-seed5-truss.phaeton.io",
+				"port": 5000
+			},
+      {
+				"ip": "core-seed6-truss.phaeton.io",
+				"port": 5000
+			},
+      {
+				"ip": "core-seed7-truss.phaeton.io",
+				"port": 5000
+			},
+      {
+				"ip": "core-seed8-truss.phaeton.io",
+				"port": 5000
+			},
+      {
+				"ip": "core-seed9-truss.phaeton.io",
+				"port": 5000
+			},
+      {
+				"ip": "core-seed10-truss.phaeton.io",
+				"port": 5000
+			}
+    ],
+    "port": 5000,
+    "peerBanTime": 86400000,
+    "connectTimeout": 3000,
+    "ackTimeout": 3000,
+    "maxOutboundConnections": 20,
+    "maxInboundConnections": 100,
+    "sendPeerLimit": 16,
+    "maxPeerDiscoveryResponseLength": 200,
+    "wsMaxPayload": 3048576,
+    "advertiseAddress": true
+  },
+  "logger": {
+    "logFileName": "truss.log",
+    "fileLogLevel": "info",
+    "consoleLogLevel": "debug"
+  },
+  "genesisConfig": {
+    "bftThreshold": 58,
+    "communityIdentifier": "phaeton_truss",
+    "blockTime": 5,
+    "maxPayloadLength": 256000,
+    "rewards": {
+      "milestones": [
+        "400000000",
+        "200000000",
+        "100000000"
+      ],
+      "offset": 51840,
+      "distance": 12614400
+    },
+    "minFeePerByte": 50,
+    "baseFees": [
+      {
+        "moduleID": 2,
+        "assetID": 0,
+        "baseFee": "1000"
+      },
+      {
+        "moduleID": 5,
+        "assetID": 0,
+        "baseFee": "100000000"
+      }
+    ],
+		"minRemainingBalance": "5000000",
+    "activeDelegates": 86,
+    "delegateListRoundOffset": 2,
+    "standbyDelegates": 4
+  }
+}
